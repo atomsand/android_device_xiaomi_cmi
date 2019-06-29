@@ -18,6 +18,7 @@
 -include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/cmi
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
