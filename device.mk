@@ -19,6 +19,13 @@ $(call inherit-product, device/xiaomi/sm8250-common/sm8250.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/cmi/cmi-vendor.mk)
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/devicesettings/privapp-permissions-devicesettings.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-devicesettings.xml
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
