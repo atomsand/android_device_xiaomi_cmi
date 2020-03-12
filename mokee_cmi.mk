@@ -34,10 +34,10 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi Mi 10 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := "qti/qssi/qssi:10/QKQ1.191117.002/V11.0.2.0.QJACNXM:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/cmi/cmi:10/QKQ1.191117.002/V11.0.2.0.QJACNXM:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="qssi-user 10 QKQ1.191117.002 V11.0.2.0.QJACNXM release-keys" \
+    PRIVATE_BUILD_DESC="Xiaomi-user 10 QKQ1.191117.002 V11.0.2.0.QJACNXM release-keys" \
     PRODUCT_NAME="cmi" \
     TARGET_DEVICE="cmi"
 
