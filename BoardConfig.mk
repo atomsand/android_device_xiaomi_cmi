@@ -19,6 +19,9 @@
 
 DEVICE_PATH := device/xiaomi/cmi
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := cmi
 
