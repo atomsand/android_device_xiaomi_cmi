@@ -1,0 +1,8 @@
+# Fod
+ro.hardware.fp.fod=true
+persist.vendor.sys.fp.fod.location.X_Y=441,1808
+persist.vendor.sys.fp.fod.size.width_height=197,197
+
+# display fps switch
+persist.vendor.dfps.level=90
+persist.vendor.power.dfps.level=0
