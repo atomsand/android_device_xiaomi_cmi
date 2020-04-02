@@ -19,6 +19,10 @@ $(call inherit-product, device/xiaomi/sm8250-common/sm8250.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/cmi/cmi-vendor.mk)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
