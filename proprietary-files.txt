@@ -252,3 +252,11 @@ vendor/bin/batteryd
 vendor/bin/batterysecret
 vendor/etc/init/init.batteryd.rc
 vendor/etc/init/init.batterysecret.rc
+
+# Fingerprint sensor
+vendor/lib/libgf_hal.so
+vendor/lib64/libgf_hal.so
+vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/hw/fingerprint.goodix_fod.so
+vendor/lib/hw/fingerprint.goodix_fod.so
