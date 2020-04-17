@@ -154,23 +154,27 @@ vendor/lib64/camera/components/com.xiaomi.node.tracker.so
 vendor/lib64/camera/components/libdepthmapwrapper.so
 
 # Sensors
+vendor/bin/sensors.qti
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/bin/sensors.qti
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib/sensors.ssc.so
-vendor/lib64/sensors.ssc.so
 vendor/lib/sensors.touch.so
+vendor/lib/libsensorcal.so
+vendor/lib/libsensorslog.so
+vendor/lib/libssc.so
+vendor/lib/libssccalapi.so
+vendor/lib/libssc_default_listener.so
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.touch.so
 vendor/lib64/sensors.elliptic.so
-vendor/lib/libsensorcal.so
 vendor/lib64/libsensorcal.so
-vendor/lib/libsensorslog.so
 vendor/lib64/libsensorslog.so
-vendor/lib/libssc.so
 vendor/lib64/libssc.so
-vendor/lib/libssccalapi.so
 vendor/lib64/libssccalapi.so
-vendor/lib/libssc_default_listener.so
 vendor/lib64/libssc_default_listener.so
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bmp285_0.json
