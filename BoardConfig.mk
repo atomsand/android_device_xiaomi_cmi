@@ -32,5 +32,10 @@ TARGET_KERNEL_CONFIG := cmi_user_defconfig
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Fingerprint
+SOONG_CONFIG_XIAOMI_KONA_FOD_POS_X = 441
+SOONG_CONFIG_XIAOMI_KONA_FOD_POS_Y = 1808
+SOONG_CONFIG_XIAOMI_KONA_FOD_SIZE = 197
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/cmi/BoardConfigVendor.mk
