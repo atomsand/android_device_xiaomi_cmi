@@ -12,7 +12,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="device_specific_settings_title">Device-specific settings</string>
-    <string name="device_specific_settings_summary">Settings specific to Mi 10 Pro</string>
-    <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
+    <string-array name="device_refreshrates">
+        <item>60 Hz</item>
+        <item>90 Hz</item>
+    </string-array>
+    <string-array name="device_refreshrates_val">
+        <item>60</item>
+        <item>90</item>
+    </string-array>
 </resources>

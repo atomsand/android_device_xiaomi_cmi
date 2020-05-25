@@ -14,17 +14,21 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.mokee.settings.display;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-public class DevicePreferenceActivity extends PreferenceActivity {
+public class DisplaySettingsActivity extends PreferenceActivity {
+
+    private static final String TAG_DISPLAY = "display";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new DevicePreferenceFragment())
+                .replace(android.R.id.content, new DisplaySettingsFragment(), TAG_DISPLAY)
                 .commit();
     }
 }

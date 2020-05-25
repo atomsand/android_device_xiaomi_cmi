@@ -21,10 +21,7 @@ $(call inherit-product, vendor/xiaomi/cmi/cmi-vendor.mk)
 
 # Device Settings
 PRODUCT_PACKAGES += \
-    DeviceSettings
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/devicesettings/privapp-permissions-devicesettings.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-devicesettings.xml
+    DisplaySettings
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340

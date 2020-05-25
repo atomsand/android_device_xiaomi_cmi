@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.device;
+package org.mokee.settings.display;
 
 import android.os.Bundle;
 import android.provider.Settings;
@@ -22,10 +22,13 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.Preference;
 import androidx.preference.ListPreference;
 
-public class DevicePreferenceFragment extends PreferenceFragment {
-    private static final String KEY_MIN_REFRESH_RATE = "pref_min_refresh_rate";
+import org.mokee.settings.R;
 
-    private ListPreference mPrefMinRefreshRate;
+public class DisplaySettingsFragment extends PreferenceFragment {
+
+    private static final String REFRESHRATE_KEY = "refreshrate";
+
+    private ListPreference mRefreshRate;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -35,26 +38,26 @@ public class DevicePreferenceFragment extends PreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.device_prefs);
-        mPrefMinRefreshRate = (ListPreference) findPreference(KEY_MIN_REFRESH_RATE);
-        mPrefMinRefreshRate.setOnPreferenceChangeListener(PrefListener);
+        addPreferencesFromResource(R.xml.display_settings);
+        mRefreshRate = (ListPreference) findPreference(REFRESHRATE_KEY);
+        mRefreshRate.setOnPreferenceChangeListener(RefreshRateListener);
         updateValuesAndSummaries();
     }
 
     private void updateValuesAndSummaries() {
         final float refreshRate = Settings.System.getFloat(getContext().getContentResolver(),
             Settings.System.MIN_REFRESH_RATE, 90.0f);
-        mPrefMinRefreshRate.setValue(((int) refreshRate) + " Hz");
-        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getValue());
+        mRefreshRate.setValue(((int) refreshRate) + " Hz");
+        mRefreshRate.setSummary(mRefreshRate.getValue());
     }
 
-    private Preference.OnPreferenceChangeListener PrefListener =
+    private Preference.OnPreferenceChangeListener RefreshRateListener =
         new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object value) {
                 final String key = preference.getKey();
 
-                if (KEY_MIN_REFRESH_RATE.equals(key)) {
+                if (REFRESHRATE_KEY.equals(key)) {
                     Settings.System.putFloat(getContext().getContentResolver(),
                         Settings.System.MIN_REFRESH_RATE,
                         (float) Integer.parseInt((String) value));
