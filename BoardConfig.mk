@@ -21,7 +21,6 @@ DEVICE_PATH := device/xiaomi/cmi
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Assert
@@ -29,6 +28,9 @@ TARGET_OTA_ASSERT_DEVICE := cmi
 
 # Kernel
 TARGET_KERNEL_CONFIG := cmi_user_defconfig
+
+# Display
+TARGET_SCREEN_DENSITY := 440
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/cmi/BoardConfigVendor.mk
