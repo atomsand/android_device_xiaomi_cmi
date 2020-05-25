@@ -293,9 +293,7 @@ vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Battery monitors
-vendor/bin/batteryd
 vendor/bin/batterysecret
-vendor/etc/init/init.batteryd.rc
 vendor/etc/init/init.batterysecret.rc
 
 # Fingerprint sensor
